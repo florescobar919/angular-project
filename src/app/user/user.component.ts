@@ -12,8 +12,8 @@ const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
 })
 export class UserComponent {
 
-  @Input() avatar!: string;
-  @Input() name!: string;
+  @Input({required:true}) avatar!: string;
+  @Input({required:true}) name!: string;
 
   get imagePath () {
     return 'users/' + this.avatar;
