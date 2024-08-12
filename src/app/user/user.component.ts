@@ -15,13 +15,8 @@ export class UserComponent {
   selectedUser = signal(DUMMY_USERS[randomIndex]);
   imagePath = computed (()=> 'users/' + this.selectedUser().avatar);
 
-  /*get userImagePath () {
-    return 'users/' + this.selectedUser().avatar
-  }*/
-
   onSelectedUser() {
     const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
-    //this.selectedUser = DUMMY_USERS[randomIndex];
     this.selectedUser.set(DUMMY_USERS[randomIndex]);
   }
 
