@@ -13,4 +13,8 @@ import { DUMMY_USERS } from './dummy-users';
 export class AppComponent {
   title = 'to-do';
   users = DUMMY_USERS;
+
+  selectedUser(idUser: string) {
+    console.log("the user clicked is: " + idUser);    
+  }
 }
