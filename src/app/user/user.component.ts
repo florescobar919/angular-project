@@ -19,8 +19,8 @@ export class UserComponent {
   name = input.required<string>();
   id = input.required<string>();
 
-  //@Output() selectUser = new EventEmitter();
-  selectUser = output<string>();
+  @Output() selectUser = new EventEmitter<string>();
+  //selectUser = output<string>();
 
   /*get imagePath () {
     return 'users/' + this.avatar;
