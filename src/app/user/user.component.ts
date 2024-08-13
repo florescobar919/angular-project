@@ -15,9 +15,15 @@ export class UserComponent {
   //@Input({required:true}) avatar!: string;
   //@Input({required:true}) name!: string;
   //avatar = input<string>('default value');
-  avatar = input.required<string>();
-  name = input.required<string>();
-  id = input.required<string>();
+  //avatar = input.required<string>();
+  //name = input.required<string>();
+  //id = input.required<string>();
+
+  @Input({required:true}) user! : {
+    id: string,
+    name: string,
+    avatar: string
+  }
 
   @Output() selectUser = new EventEmitter<string>();
   //selectUser = output<string>();
@@ -26,7 +32,7 @@ export class UserComponent {
     return 'users/' + this.avatar;
   }*/
  imagePath = computed(()=> {
-  return 'users/' + this.avatar();
+  return 'users/' + this.user.avatar;
  })
 
   onSelectedUser(idUser: string) {
