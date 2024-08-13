@@ -20,8 +20,8 @@ export class UserComponent {
   //name = input.required<string>();
   //id = input.required<string>();
 
-  @Input({required:true}) user! : User
-
+  @Input({required:true}) user! : User;
+  @Input({required:true}) selected! : boolean;
   @Output() selectUser = new EventEmitter<string>();
   //selectUser = output<string>();
 
