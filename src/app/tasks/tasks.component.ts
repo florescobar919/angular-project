@@ -27,6 +27,10 @@ export class TasksComponent {
     this.isAddingTask = true;
   }
 
+  onCancelAddTask() {
+    this.isAddingTask = false; 
+  }
+
   tasks = [{
       id: 't1',
       userId: 'u1',
