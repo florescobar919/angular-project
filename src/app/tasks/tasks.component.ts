@@ -1,7 +1,6 @@
-import { Component, Input, input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TaskComponent } from "./task/task.component";
 import { NewTaskComponent } from "./new-task/new-task.component";
-import { type NewTask } from '../interfaces/new-task.model';
 import { TaskService } from '../services/tasks.service';
 
 @Component({
@@ -14,7 +13,6 @@ import { TaskService } from '../services/tasks.service';
 export class TasksComponent {
   @Input({required: true}) userName!: string;
   @Input({required: true}) userId!: string;
-  //private taskService : TaskService;
 
   constructor(private taskService: TaskService) {
 
@@ -24,10 +22,6 @@ export class TasksComponent {
 
   get selectedUserTasks() {
     return this.taskService.getUserTasks(this.userId);
-  }
-
-  onCompleteTask(id: string) {
-    this.taskService.removeTask(id);
   }
 
   onStartAddTask() {

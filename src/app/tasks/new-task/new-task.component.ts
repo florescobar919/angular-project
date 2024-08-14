@@ -14,11 +14,7 @@ export class NewTaskComponent {
   @Input() userId!: string;
   @Output() close = new EventEmitter<void>();
   @Output() add = new EventEmitter<NewTask>();
-  /*
-  txtTitle = signal('');
-  txtSummary = signal('');
-  txtDueDate = signal('');
-  */
+
   txtTitle = '';
   txtSummary = '';
   txtDueDate = '';
@@ -33,10 +29,7 @@ export class NewTaskComponent {
       title: this.txtTitle,
       summary: this.txtSummary,
       duedate: this.txtDueDate
-    });
-
-    console.log(this.userId);
-    
+    });    
     
     this.taskService.addTask({
       title: this.txtTitle,
