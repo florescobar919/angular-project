@@ -25,12 +25,6 @@ export class NewTaskComponent {
   }
 
   onSubmit() {
-    console.log({
-      title: this.txtTitle,
-      summary: this.txtSummary,
-      duedate: this.txtDueDate
-    });    
-    
     this.taskService.addTask({
       title: this.txtTitle,
       summary: this.txtSummary,
